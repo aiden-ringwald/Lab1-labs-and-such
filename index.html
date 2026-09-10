@@ -1,63 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Styling with CSS</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab1: my first page</title>
 </head>
 <body>
-  <h2>Previous Labs</h2>
+    <header>
+        <h1>Welcome to my Website!</h1>
+        <h2>IT301 Labs and Projects</h2>
+    </header>
 
-  <ul>
-      <li>Lab 1: Create and publish your website using GitHub.</li>
-      <li>Lab 2: Add more content to your website.</li>
-      <li>Lab 3: Add hyperlinks to your website.</li>
-      <li>Lab 4: Style the content of your website using CSS.</li>
-  </ul>
+    <nav>
+        <a href="#me">About Me</a>
+        <a href="#labs">Labs</a>
+        <a href="#contact">Contact</a>
+    </nav>
 
-
-  <header>
-    <h1>styling with <span>css</span></h1>
-    <p>In <span>CSS</span>, selectors are patterns used to select the element(s) you want to style.</p>
-  </header>
-
- <main>
-
-    <section>
-      <h2>Selecting Specific Elements with <span>CSS</span></h2>
-      <p>
-        To select multiple elements, we use commas. Example: <code>h1, h2, p</code><br>
-        To select a specific child element in a list, we use <code>:nth-child()</code>. Example: <code>li:nth-child(2)</code><br>
-        To select a specific child element within a parent, we use <code>element element:nth-child(n)</code>. Example: <code>ul ul li:nth-child(1)</code>
-
-      </p>
+    <section id ='Me'>
+        <h2>About Me</h2>
+        <p> My name is Aiden ringwald and I am a student of IT301. 
+            I am currently a student at James Madison University (their website can be found at 
+            <a href="https://www.jmu.edu/index.shtml" target="_blank">here</a>) and 
+            I am studying IT. I am 20 years old and I hope to graduate in
+            2028 and get a job in the IT field. I am currently a junior and
+            I am taking this class to improve my skill in web devlopment.
+        </p>   
+        
+        <h2>My Hobbies</h2>
+        <p>
+            In my free time, I like to play video games and listen to music.
+            I am very intrested in technology and I love to learn about new
+            things in the field of IT. I also like to play sports like soccer
+            in my free time aswell. 
+        </p>
     </section>
     
-    <section>
-        <h2>Let's change the text and background:</h2>
-        <ul>
-          <li>This item is styled in royal blue.</li>
-          <li>This item is styled in forest green.</li>
-          <li>This item is styled in crimson red.</li>
+    <section id="labs">
+            <h2>IT301 Labs and Projects</h2>
 
-          <ul>
-            <li>This sub-item is violet with a light gray background.</li>
+            <p>
+                This website contains my IT301 labs and projects as 
+                I continue learning about web development and HTML.
+            </p>
+
+            <h3>List of Labs</h3>
             <ul>
-              <li>This inner item is dark orange with beige background.</li>
+                <li>Lab 1 - Create a Website</li>
+                <li>Lab 2 - Add semantics to your website</li>
             </ul>
-            <li>Back to violet with light gray background.</li>
-          </ul>
+        </section>
 
-          <li>Back to royal blue for consistency.</li>
-        </ul>
-      </section>
-  
-  </main>
+        <article>
+            <h2>My Favorite Foods</h2>
+            <p>
+                I love to eat pizza, burgers, and ice cream. I also like 
+                to eat sushi and other Japanese foods. I am not a big 
+                fan of vegetables but I do like to eat salads and other 
+                healthy foods. 
 
-  <footer>
-    <p>&#169; Sep 23 2025/ Nareman Hamdan</p>
-  </footer>
+                A website with a list of my favorite foods can be found 
+                <a href="https://www.foodnetwork.com/recipes" target="_blank">here</a>.
+            </p>
+        <aside>
+            <h2>Quick Facts</h2>
+            <ul>
+                <li>I am currently learning HTML.</li>
+                <li>I am working on IT301 labs and projects.</li>
+                <li>I am interested in technology.</li>
+                <li>I want to improve my web development skills.</li>
+                <li>I also like cats so here is a cute picture</li>
+            </ul>
+        </aside>
 
+    <footer id="contact">
+        <p>2026 Aiden Ringwald. IT301 Website.</p>
+    </footer>
+
+
+
+
+
+
+
+
+
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREbC_sintWtm1BnhdRttI8BZ8IbaI57GX3SDdf5Oilsw&s=10" alt="cute cat">
 </body>
 </html>
