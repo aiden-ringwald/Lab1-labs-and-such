@@ -1,75 +1,85 @@
-*{
-    padding:10px;
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f2f2f2;
+    color: #333333;
     margin:0;
 }
 
 
-section{
-  margin: 20px 0;
-}
-
-ul{
-  padding-left: 40px;
-}
-
-ul ul ul {
-  margin-top: 10px;
-}
 
 /* 1. Headings */
+header {
+    background-color: #450084;
+    color: yellow;
+    text-align: center;
+    padding: 20px;
 
+    .hed{
+  font-family: "Freckle Face", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
 
+}
 
+/* Navigation */
+nav {
+    background-color: white;
+    text-align: center;
+    padding: 15px;
+    border: 1px solid #cccccc;
+}
+
+nav a {
+    color: #450084;
+    text-decoration: none;
+    margin: 10px;
+}
 /* 2. Force 'CSS' to stay uppercase */
 
 
 /* 3. Paragraph styling */
-
-
+p {
+    font-family: "Frijole", system-ui;
+}
 
 /* 4. Section borders */
-
+section {
+    background-color: white;
+    border: 1px solid #cccccc;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px;
+    box-shadow: 2px 2px 5px #cccccc;
+}
 
 /* 5. List styling */
 
 
-/* Main list item colors */
+
 ul > li:nth-child(1) {
   color: #2a52be
 }
-
 ul > li:nth-child(2) {
   color: #228b22
 }
-
 ul > li:nth-child(3) {
   color: #dc143c
 }
-/* Sub-list */
-ul ul > li:nth-child(1) {
-  color: #9400d3;
-  background-color: #f0f0f0;
-  border-radius: 8px;
+ul > li:nth-child(4) {
+  color: #450084
 }
-
-/* Inner sub-list */
-ul ul ul> li:nth-child(1) {
-  color: #ff8c00;
-  background-color: #fdf6e3;
-  border-radius: 8px;
-  font-size: smaller;
-}
-
-/* Second violet item in sublist */
-ul ul > li:nth-child(3) {
-  color: #9400d3;
-  background-color: #f0f0f0;
-  border-radius: 8px;
-}
-
-/* Final main list item */
 ul > li:nth-child(5) {
-  color: #2a52be
+  color: yellow
+}
+
+
+/* Image */
+img {
+    width: 250px;
+    border: 2px solid #450084;
+    border-radius: 8px;
+    padding: 5px;
 }
 
 /* Footer */
