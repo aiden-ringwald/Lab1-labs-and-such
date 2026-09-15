@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The box model</title>
+  <style>
+    #parent {
+      width: 195px;
+      height: 200px;
+      border: 1px solid black;
+      background-color: black;
+    }
+    #child {
+      background-color: white;
+      height: 87px;
+      width: 100px;
+      border: 1px solid black;
+      margin-left: 45px;
+      box-sizing: border-box;
+    }
+     #child2 {
+      background-color: white;
+      height: 89px;
+      width: 100px;
+      border: 1px solid black;
+      margin-left: 45px;
+      margin-top: 25px;
+      box-sizing: border-box;
+    }
+  </style>
+</head>
+<body>
+  <div id="parent">
+    <div id="child"></div>
+    <div id="child2"></div>
+  </div>
+</body>
+</html>
