@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Test</title>
+   <style>
+        body {
+            margin: 0;
+        }
+       #flex-parent1{
+           display: flex;
+           width: 100vw;
+           height: 100vh;
+       }
+       #flex-parent2{
+           display: flex;
+           width: 150px;
+           height: 100vh;
+           background-color: orange;
+           flex-shrink: 0;
+           flex-direction: column;
+           align-items: center;
+           justify-content: space-between;
+           padding: 30px 0px;
+       }
+       #flex-parent2 > div{
+           font-size: 40px;
+       }
+       #top-icons {
+           display: flex;
+           flex-direction: column;
+           align-items: center;
+       }
+       #bottom-icons {
+           display: flex;
+           justify-content: center;
+           margin-top: auto;
+       }
+       #flex-parent3{
+           display: flex;
+           flex-wrap: wrap;
+           gap: 2px 2px;
+           overflow-y: auto;
+           flex: 1;
+           min-width: 0;
+           overflow-y: auto;
+       }
+       img{
+           flex-grow: 1;
+       }
+   </style>
+</head>
+
+
+<body>
+   <div id="flex-parent1">
+       <div id="flex-parent2">
+            <div id="top-icons">
+                <div>&#x1F4F7;</div>
+                <div>&#x1F5C4;&#xfe0f;</div>
+                <div>&#x2764;&#xfe0f;</div>
+            </div>
+            <div id="bottom-icons">
+                <div>&#x1F5D1;&#xfe0f;</div>
+            </div>
+            <div id="box"></div>
+       </div>
+       <div id="flex-parent3">
+           <img id="child1" src="https://picsum.photos/150/100?random=1" alt="Image 1">
+           <img id="child2" src="https://picsum.photos/137/100?random=2" alt="Image 2">
+           <img id="child3" src="https://picsum.photos/201/100?random=3" alt="Image 3">
+           <img id="child4" src="https://picsum.photos/243/100?random=4" alt="Image 4">
+           <img id="child5" src="https://picsum.photos/176/100?random=5" alt="Image 5">
+           <img id="child6" src="https://picsum.photos/329/100?random=6" alt="Image 6">
+           <img id="child7" src="https://picsum.photos/300/100?random=7" alt="Image 7">
+           <img id="child8" src="https://picsum.photos/267/100?random=8" alt="Image 8">
+           <img id="child9" src="https://picsum.photos/192/100?random=9" alt="Image 9">
+           <img id="child10" src="https://picsum.photos/121/100?random=10" alt="Image 10">
+           <img id="child11" src="https://picsum.photos/400/100?random=11" alt="Image 11">
+           <img id="child12" src="https://picsum.photos/362/100?random=12" alt="Image 12">
+           <img id="child13" src="https://picsum.photos/127/100?random=13" alt="Image 13">
+           <img id="child14" src="https://picsum.photos/256/100?random=14" alt="Image 14">
+           <img id="child15" src="https://picsum.photos/212/100?random=15" alt="Image 15">
+           <img id="child16" src="https://picsum.photos/381/100?random=16" alt="Image 16">
+           <img id="child17" src="https://picsum.photos/176/100?random=17" alt="Image 17">
+           <img id="child18" src="https://picsum.photos/251/100?random=18" alt="Image 18">
+           <img id="child19" src="https://picsum.photos/325/100?random=19" alt="Image 19">
+           <img id="child20" src="https://picsum.photos/196/100?random=20" alt="Image 20">
+       </div>
+   </div>
+
+
+</body>
+</html>
