@@ -1,0 +1,81 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM and Event Listeners</title>
+
+    <style>
+        body {
+            background-color: lightblue;
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+
+        button {
+            background-color: blue;
+            color: white;
+            font-size: 24px;
+            padding: 20px 40px;
+            margin: 20px;
+            border: none;
+            border-radius: 10px;
+        }
+
+        #mouseArea {
+            height: 75vh;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>JavaScript Mouse Events</h1>
+
+    <button id="myButton">Click Me! 😊</button>
+
+    <div id="mouseArea"></div>
+
+    <script>
+        const myButton = document.getElementById("myButton");
+        const mouseArea = document.getElementById("mouseArea");
+
+        function mouseOver(event) {
+            event.target.textContent = "Do not click! 😠";
+            event.target.style.backgroundColor = "yellow";
+            event.target.style.color = "black";
+        }
+
+        function clickButton(event) {
+            event.target.textContent = "Ouch! 🤕";
+            event.target.style.backgroundColor = "red";
+            event.target.style.color = "white";
+        }
+
+        function mouseLeave(event) {
+            event.target.textContent = "Phew! 😌";
+            event.target.style.backgroundColor = "lightgreen";
+            event.target.style.color = "black";
+        }
+
+        function doubleClick(event) {
+            event.target.textContent = "Double trouble! 🤩";
+            event.target.style.backgroundColor = "pink";
+            event.target.style.color = "black";
+        }
+
+        function mouseMove(event) {
+            myButton.textContent = "I see you! 👀";
+            myButton.style.backgroundColor = "lightblue";
+            myButton.style.color = "black";
+        }
+
+        myButton.addEventListener("mouseover", mouseOver);
+        myButton.addEventListener("click", clickButton);
+        myButton.addEventListener("mouseleave", mouseLeave);
+        myButton.addEventListener("dblclick", doubleClick);
+
+        mouseArea.addEventListener("mousemove", mouseMove);
+    </script>
+
+</body>
+</html>
