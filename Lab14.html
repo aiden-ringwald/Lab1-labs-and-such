@@ -10,8 +10,8 @@
 
 <body>
     <h1>Random User Generator</h1>
-    <button>Generate Profile</button>
-    <div></div>
+    <button id="generateButton">Generate Profile</button>
+    <div id="profile"></div>
 
     <script>
         let api = 'https://randomuser.me/api/';
@@ -39,6 +39,7 @@
                 profile.replaceChildren(img, name, email, phone);
 
             } catch (error) {
+                console.log(error)
             }
         }
 
