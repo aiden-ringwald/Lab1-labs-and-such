@@ -1,0 +1,50 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random User Profile</title>
+
+</head>
+
+<body>
+    <h1>Random User Generator</h1>
+    <button>Generate Profile</button>
+    <div></div>
+
+    <script>
+        let api = 'https://randomuser.me/api/';
+
+        async function getProfile() {
+            try {
+                const response = await fetch(api);
+                const data = await response.json();
+                const user = data.results[0];
+
+                const img = document.createElement("img");
+                img.src = user.picture.large;
+                img.width = 300;
+
+                const name = document.createElement("h2");
+                name.textContent = user.name.first + " " + user.name.last;
+
+                const email = document.createElement("p");
+                email.textContent = user.email;
+
+                const phone = document.createElement("p");
+                phone.textContent = user.phone;
+
+                const profile = document.getElementById("profile");
+                profile.replaceChildren(img, name, email, phone);
+
+            } catch (error) {
+            }
+        }
+
+        document.getElementById("generateButton")
+            .addEventListener("click", getProfile);
+        getProfile();
+</script>
+</body>
+</html>
