@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Lab16</title>
+   <style>
+    .valid {
+        color: green;
+    }
+
+    .invalid {
+        color: red;
+    }
+</style>
+</head>
+<body>
+   <form action="#">
+       <label for="name">Name</label>
+       <input type="text" id="name" required placeholder="Enter your name">
+       <br>
+       <label for="email">Email</label>
+       <input type="email" id="email" required placeholder="Enter your email">
+       <br>
+       <label for="password">Password</label>
+       <input type="password" id="password" required placeholder="Enter your password">
+       <button type="submit" id="submitbtn">Submit</button>
+    </form>
+    <div id="password-rules" hidden>
+    <p id="length" class="invalid">At least 6 characters</p>
+    <p id="special" class="invalid">Must include a special character (!@#$...)</p>
+    <p id="uppercase" class="invalid">Must include an uppercase letter (A-Z)</p>
+    </div>
+
+    <script>
+        const form = document.querySelector('form');
+        const password = document.querySelector('#password');
+
+            form.addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const pass = password.value;
+
+            const hasLength = pass.length >= 6;
+            const hasSpecial = /[!@#$%^&*(),.?":{}|<>]/.test(pass);
+            const hasUppercase = /[A-Z]/.test(pass);
+
+            if (hasLength && hasSpecial && hasUppercase) {
+                window.location.href = "success.html";
+            }
+        });
+        const lengthRule = document.querySelector('#length');
+        const specialRule = document.querySelector('#special');
+        const uppercaseRule = document.querySelector('#uppercase');
+
+        password.addEventListener('input', function() {
+            const pass = password.value;
+
+            const hasLength = pass.length >= 6;
+            const hasSpecial = /[!@#$%^&*(),.?":{}|<>]/.test(pass);
+            const hasUppercase = /[A-Z]/.test(pass);
+
+            document.querySelector('#password-rules').hidden = false;
+
+            lengthRule.classList.toggle("valid", hasLength);
+            lengthRule.classList.toggle("invalid", !hasLength);
+
+            specialRule.classList.toggle("valid", hasSpecial);
+            specialRule.classList.toggle("invalid", !hasSpecial);
+
+            uppercaseRule.classList.toggle("valid", hasUppercase);
+            uppercaseRule.classList.toggle("invalid", !hasUppercase);
+        });
+    </script>
+</body>
+</html>
